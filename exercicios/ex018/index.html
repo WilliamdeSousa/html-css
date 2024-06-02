@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+        @font-face {
+            font-family: 'Sevillana';
+            src: url(Sevillana-Regular.ttf);
+        }
+
+        #padrao {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+
+        #google {
+            font-family: "Jacquard 12", system-ui;
+            font-weight: 400;
+        }
+
+        #local {
+            font-family: 'Sevillana', sans-serif;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Fontes em CSS</h1>
+    <h2 id="padrao">Podemos configurar fontes padrão do sistema</h2>
+    <h2 id="google">Ou então usar uma fonte do Google Fonts</h2>
+    <h2 id="local">Ou ainda usar um arquivo local de fontes</h2>
+</body>
+</html>
