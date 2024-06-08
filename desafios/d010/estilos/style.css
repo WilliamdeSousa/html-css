@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @font-face {
     font-family: 'Android';
     src: url('../fontes/idroid.otf') format('opentype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 :root {
@@ -20,115 +20,188 @@
 
     --fonte-titulo-site: 'Bebas Neue', sans-serif;
     --fonte-android: 'Android', cursive;
+    --fonte-padrao: Verdana, Arial, Helvetica, sans-serif
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fonte-padrao);
     background-color: var(--cor0);
-    margin: 0px;
 }
 
 header {
     background-image: linear-gradient(var(--cor3), var(--cor7));
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.179);
 }
 
-header > h1 {
+header h1 {
     font-family: var(--fonte-titulo-site);
-    font-size: 2.5em;
+    font-size: 3em;
+    font-weight: normal;
     color: white;
     text-align: center;
-    margin: 0px;
     padding-top: 50px;
 }
 
-header > p {
+header p {
     color: white;
     text-align: center;
-    margin: 30px;
+    max-width: 600px;
+    font-size: 1.1em;
+    margin: 30px auto;
 }
 
-header > nav {
-    padding: 15px;
+nav {
+    padding: 10px;
+    line-height: 2em;
 }
 
-header > nav > a {
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
-    margin-right: 15px;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
 }
 
-header > nav > a:hover {
-    text-decoration: underline;
+nav a:hover {
+    background-color: var(--cor4);
+    color: var(--cor7)
 }
 
 main {
     background-color: white;
-    max-width: 850px;
+    min-height: 330px;
+    max-width: 800px;
     margin: auto;
-    box-shadow: 0px 0px 5px 3px #18523239;
+    margin-bottom: 15px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.259);
     border-radius: 0px 0px 10px 10px;
+}
+
+main h1 {
+    font-family: var(--fonte-android);
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--cor6);
+}
+
+main h2 {
+    margin-top: 5px;
+    text-indent: 5px;
+    font-family: var(--fonte-android);
+    font-size: 1.3em;
+    font-weight: normal;
+    color: var(--cor7);
+    background-image: linear-gradient(90deg, var(--cor2), white);
 }
 
 main p {
     text-align: justify;
     text-indent: 2em;
-    margin: 5px 0px 10px 0px;
+    line-height: 1.7em;
+    padding: 15px 0px;
+}
+
+main a {
+    text-decoration: none;
+    background-color: var(--cor6);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+main a:hover {
+    color: var(--cor3);
+}
+
+main a::after {
+    content: '\00a0\1F517';
+}
+
+main strong {
+    color:var(--cor6)
+}
+
+main picture > img {
+    width: 100%;
 }
 
 main img {
-    padding: 10px;
     display: block;
     margin: auto;
 }
 
-main > article {
-    padding: 10px 20px;
+.video {
+    background-color: var(--cor6);
+    margin: 0px -20px 0px -20px;
+    padding-top: 3%;
+    padding-bottom: 58.9%;
+    position: relative;
 }
 
-main > article > h1 {
-    font-family: var(--fonte-android);
-    font-size: 1.5em;
-    color: #185232;
+.video iframe {
+    position: absolute;
+    left: 4%;
+    top: 4%;
+    width: 92%;
+    height: 92%;
 }
 
-main > article > h2 {
-    font-family: var(--fonte-android);
-    font-size: 1.3em;
-    color:#185232;
-    background-image: linear-gradient(90deg, #78ce9f5d, white);
-}
-
-main > section#video {
-    background-color: #185232;
-    padding: 20px;
-    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.426);
-}
-
-main > section#video > iframe {
-    display: block;
-    margin: auto;
-}
-
-main > section#extra {
-    background-color: #78ce9f5d;
-    margin: 5px 20px;
+aside {
+    background-color: var(--cor2);
     border-radius: 15px;
-    padding-bottom: 20px;
+    margin-top: 10px;
+    padding: 10px;
 }
 
-main > section#extra > h1 {
+aside h3 {
+    margin: -10px -10px;
     border-radius: 15px 15px 0px 0px;
     background-color: #278e56;
     font-size: large;
     font-weight: bolder;
-    padding: 10px;
     color: white;
+    padding: 10px;
 }
 
-main > section#extra > p {
-    padding: 0px 10px;
+aside p {
+    padding-bottom: 0px;
+}
+
+aside ul {
+    list-style-position: inside;
+    list-style-type: '\2714\00a0';
+    columns: 2;
+    padding: 5px;
+    border: ;
 }
 
 footer {
+    background-color: var(--cor7);
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: small;
+    margin: 0px;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--cor2);
 }
