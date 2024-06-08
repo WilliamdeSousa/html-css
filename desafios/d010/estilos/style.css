@@ -1,25 +1,39 @@
 @charset "UTF-8";
+
 @font-face {
-    font-family: Idroid;
-    src: url('fontes/idroid.otf') format('opentype');
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
 }
-@font-face {
-    font-family: Bebas Neue;
-    src: url('fontes/BebasNeue-Regular.ttf') format('truetype');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+:root {
+    --cor0: #FDF7D1; /*fundo da página*/
+    --cor1: #E3FFC6; /*verde bem clarinho*/
+    --cor2: #BBFFB8; /*verde claro*/
+    --cor3: #00F289; /*padrão*/
+    --cor4: #26BF7D; /*verde forte*/
+    --cor5: #388C68; /*verde escuro*/
+    --cor6: #36594A; /*verde muito escuro*/
+    --cor7: #29332F; /*preto esverdeado*/
+
+    --fonte-titulo-site: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', cursive;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #78ce9e;
+    background-color: var(--cor0);
     margin: 0px;
 }
 
 header {
-    background-image: linear-gradient(#39d47f, #185132);
+    background-image: linear-gradient(var(--cor3), var(--cor7));
 }
 
 header > h1 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: var(--fonte-titulo-site);
     font-size: 2.5em;
     color: white;
     text-align: center;
@@ -73,13 +87,13 @@ main > article {
 }
 
 main > article > h1 {
-    font-family: 'Idroid', Arial, sans-serif;
+    font-family: var(--fonte-android);
     font-size: 1.5em;
     color: #185232;
 }
 
 main > article > h2 {
-    font-family: 'Idroid', Arial, sans-serif;
+    font-family: var(--fonte-android);
     font-size: 1.3em;
     color:#185232;
     background-image: linear-gradient(90deg, #78ce9f5d, white);
@@ -114,4 +128,7 @@ main > section#extra > h1 {
 
 main > section#extra > p {
     padding: 0px 10px;
+}
+
+footer {
 }
