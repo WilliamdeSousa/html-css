@@ -10,22 +10,78 @@ header {
     background-color: black;
     color: white;
     text-align: center;
+    padding: 30px;
 }
 
 header h1 {
     font-family: "Passion One", sans-serif;
+    font-size: 9vi;
 }
 
 header p {
     font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
 }
 
 header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+main p {
+    font-family: "Sriracha", cursive;
+    font-size: 3.5vi;
+    margin: 50px 20px;
+}
+
+main section.imagem {
+    background: no-repeat right center fixed;
+    background-size: cover;
+
+    padding: 50px 0px;
+}
+
+main section#flor {
+    background-color: green;
+    background-image: url(imagens/background001.jpg);
+}
+
+main section#cartas {
+    background-color: lightgray;
+    background-image: url(imagens/background002.jpg);
+}
+
+main section.imagem > p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.500);
+    padding: 5px;
+    margin: 0px 20px;
+    width: 50%;
+}
+
+footer {
+    background-color: black;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: small;
+    margin: 0px;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer a {
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
-p {
-    font-family: "Sriracha", cursive;
+footer a:hover {
+    text-decoration: underline;
 }
