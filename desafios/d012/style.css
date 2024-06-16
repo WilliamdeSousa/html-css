@@ -16,6 +16,7 @@ header {
 header h1 {
     font-family: "Passion One", sans-serif;
     font-size: 9vi;
+    font-variant: small-caps;
 }
 
 header p {
@@ -41,8 +42,16 @@ main p {
 main section.imagem {
     background: no-repeat right center fixed;
     background-size: cover;
-
+    box-shadow: inset 5px 5px 15px 0px rgba(0, 0, 0, 0.433);
     padding: 50px 0px;
+}
+
+main section.imagem > p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.500);
+    padding: 5px;
+    margin: 0px 20px;
+    width: 50%;
 }
 
 main section#flor {
@@ -55,13 +64,6 @@ main section#cartas {
     background-image: url(imagens/background002.jpg);
 }
 
-main section.imagem > p {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.500);
-    padding: 5px;
-    margin: 0px 20px;
-    width: 50%;
-}
 
 footer {
     background-color: black;
